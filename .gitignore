@@ -1,0 +1,12 @@
+# Archivos y carpetas que Unity genera automáticamente (NO subir)
+Library/
+Temp/
+Logs/
+obj/
+Build/
+Builds/
+Packages/
+UserSettings/
+
+# Archivos de configuración de Visual Studio Code
+.vscode/
