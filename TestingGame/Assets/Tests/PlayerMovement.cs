@@ -2,25 +2,25 @@
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    [SerializeField] float speed = 5f; //cambiamos el tipo de protección de las variables y agregamos el "SerializeField" para modificarla desde el editor
+    [SerializeField] public float moveSpeed = 5f; //cambiamos el tipo de protección de las variables y agregamos el "SerializeField" para modificarla desde el editor
     [SerializeField] float jumpForce = 8f; //cambiamos el tipo de protección de las variables y agregamos el "SerializeField" para modificarla desde el editor
     Rigidbody2D rb;
     [SerializeField] GameObject groundCheck;
     bool isGrounded = false;
 
-    void Start() {
+    void Start() {6
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update() {
+    public void Update() {
         Move();
         Jump();
     }
 
     void Move() {
         float moveX = Input.GetAxis("Horizontal");
-        //rb.linearVelocity = new Vector2(moveX * speed, rb.linearVelocity.y);
-        rb.linearVelocityX = moveX * speed;
+        //rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocityX = moveX * moveSpeed;
     }
 
     void Jump() {
@@ -36,4 +36,6 @@ public class PlayerMovement : MonoBehaviour {
             isGrounded = true;
         }
     }
+
+    
 }
