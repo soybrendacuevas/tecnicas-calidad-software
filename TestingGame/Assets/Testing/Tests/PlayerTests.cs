@@ -3,19 +3,19 @@ using System.Collections;
 using NUnit.Framework;
 using UnityEngine;
 
-public class PlayerTests : PlayerMovement
+public class PlayerTests : MonoBehaviour
 {
     private GameObject player;
     private PlayerMovement movement;
 
-    //[SetUp()] // Se ejecuta antes de cada prueba
+    [SetUp()] // Se ejecuta antes de cada prueba
     public void SetUp()
     {
         player = new GameObject();
         movement = player.AddComponent<PlayerMovement>();
-    }
+    }   
 
-    //[Test]
+    [Test]
     public void PlayerMovesRight()
     {
         movement.moveSpeed = 5f;
@@ -23,7 +23,7 @@ public class PlayerTests : PlayerMovement
         Assert.AreEqual(5f, movement.moveSpeed);
     }
 
-    //[UnityTest] // Prueba en el entorno de Unity
+    [UnityTest] // Prueba en el entorno de Unity
     public IEnumerator PlayerMovesOverTime()
     {
         float initialX = player.transform.position.x;
