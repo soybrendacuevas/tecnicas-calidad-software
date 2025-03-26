@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] GameObject groundCheck;
     bool isGrounded = false;
 
-    void Start() {6
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,6 +36,5 @@ public class PlayerMovement : MonoBehaviour {
             isGrounded = true;
         }
     }
-
     
 }
