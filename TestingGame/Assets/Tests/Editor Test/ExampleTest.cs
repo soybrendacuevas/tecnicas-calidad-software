@@ -7,5 +7,4 @@ public class ExampleTest
     {
         Assert.AreEqual(2 + 2, 4);
     }
-}
-
+}   
